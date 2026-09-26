@@ -201,3 +201,18 @@ def load_validation_split(split_path: Union[str, Path]) -> Dict[str, Any]:
     with open(split_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data
+
+
+def get_scoped_matched_ids(s1_ids: Set[str], gt_df: pd.DataFrame) -> Set[str]:
+    """
+    Extract all S2 and S3 candidate entity IDs matched by a given set of S1 IDs.
+    """
+    gt_sub = gt_df[gt_df["source1_entity_id"].isin(s1_ids)]
+    matched_ids = set()
+    for matches in gt_sub["matched_entity_ids"]:
+        if isinstance(matches, str) and matches.strip():
+            for m in matches.split(","):
+                m_clean = m.strip()
+                if m_clean:
+                    matched_ids.add(m_clean)
+    return matched_ids
