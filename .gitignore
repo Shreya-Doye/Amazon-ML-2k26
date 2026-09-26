@@ -1,1 +1,15 @@
 student_resource/
+implementation_plan.md
+proposed_solution.md
+progress_log.md
+
+# Cache & Models
+**/__pycache__/
+**/.pytest_cache/
+code/business_entity_resolution/cache/
+code/business_entity_resolution/models_saved/
+output/
+*.parquet
+*.pt
+*.bin
+*.joblib

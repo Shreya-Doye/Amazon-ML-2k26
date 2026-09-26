@@ -1,0 +1,42 @@
+# Canonical mapping for legal suffixes in business names
+
+suffixes:
+  # Corporation / Company
+  "corporation": "CORP_TOKEN"
+  "corp": "CORP_TOKEN"
+  "corp.": "CORP_TOKEN"
+  "incorporated": "INC_TOKEN"
+  "inc": "INC_TOKEN"
+  "inc.": "INC_TOKEN"
+  "company": "CO_TOKEN"
+  "co": "CO_TOKEN"
+  "co.": "CO_TOKEN"
+  
+  # Limited Liability / Private Limited
+  "limited": "LTD_TOKEN"
+  "ltd": "LTD_TOKEN"
+  "ltd.": "LTD_TOKEN"
+  "private limited": "PVT_LTD_TOKEN"
+  "pvt ltd": "PVT_LTD_TOKEN"
+  "pvt. ltd.": "PVT_LTD_TOKEN"
+  "pvt limited": "PVT_LTD_TOKEN"
+  "private ltd": "PVT_LTD_TOKEN"
+  "pvt": "PVT_TOKEN"
+  "pvt.": "PVT_TOKEN"
+  "private": "PVT_TOKEN"
+  
+  # LLC / LLP / Partnership
+  "llc": "LLC_TOKEN"
+  "l.l.c.": "LLC_TOKEN"
+  "llp": "LLP_TOKEN"
+  "l.l.p.": "LLP_TOKEN"
+  "partnership": "PARTNERSHIP_TOKEN"
+  
+  # French / European suffixes (for test set open-set generalization)
+  "sa": "SA_TOKEN"
+  "s.a.": "SA_TOKEN"
+  "sarl": "SARL_TOKEN"
+  "s.a.r.l.": "SARL_TOKEN"
+  "sas": "SAS_TOKEN"
+  "s.a.s.": "SAS_TOKEN"
+  "gmbh": "GMBH_TOKEN"
